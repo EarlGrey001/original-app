@@ -1,21 +1,10 @@
-<header>
-  <div class="header-logo">
-    <a href="/">Tea-wiki</a>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <a href="/about">Tea-wikiとは</a>
-    </li>
-  </ul>
-</header>
 
 <div class="main posts-index">
   <div class="container">
-    <div class="posts-index-item">
-      test
-    </div>
-    <div class="posts-index-item">
-      1
-    </div>
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <%= link_to(post.content,"/posts/#{post.id}") %>
+      </div>
+    <% end %>
   </div>
 </div>
